@@ -249,3 +249,91 @@ dialog::backdrop {
   padding-top: 12px;
   border-top: 1px solid #e5e7eb;
 }
+
+.choice-list {
+  display: grid;
+  gap: 12px;
+  margin: 24px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.choice-list li {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  align-items: start;
+  gap: 12px;
+
+  background: #ffffff;
+  border: 1px solid #dbe1ea;
+  border-radius: 14px;
+  padding: 14px 16px;
+
+  line-height: 1.45;
+  max-width: 760px;
+}
+
+.choice-list li::before {
+  content: attr(data-label);
+  display: grid;
+  place-items: center;
+
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+
+  background: #eef2ff;
+  color: #3730a3;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.choice-list li:hover {
+  border-color: #93c5fd;
+  background: #f8fbff;
+}
+
+.choices-wrap {
+  display: grid;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.choice-item {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  align-items: start;
+  gap: 12px;
+
+  background: #ffffff;
+  border: 1px solid #dbe1ea;
+  border-radius: 14px;
+  padding: 14px 16px;
+
+  line-height: 1.45;
+  max-width: 760px;
+}
+
+.choice-item::before {
+  content: attr(data-label);
+  display: grid;
+  place-items: center;
+
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+
+  background: #eef2ff;
+  color: #3730a3;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.choice-content {
+  padding-top: 3px;
+}
+
+.choice-item:hover {
+  border-color: #93c5fd;
+  background: #f8fbff;
+}

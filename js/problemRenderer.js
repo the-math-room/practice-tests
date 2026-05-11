@@ -81,15 +81,19 @@ export function renderChoices(choices = []) {
   }
 
   return `
-    <ol class="choice-list" type="A">
-      ${choices.map(choice => {
+    <div class="choices-wrap" aria-label="Answer choices">
+      ${choices.map((choice, index) => {
+        const label = choice.label ?? String.fromCharCode(65 + index);
+
         return `
-          <li>
-            ${renderChoiceContent(choice)}
-          </li>
+          <div class="choice-item" data-label="${escapeHTML(label)}">
+            <div class="choice-content">
+              ${renderChoiceContent(choice)}
+            </div>
+          </div>
         `;
       }).join("")}
-    </ol>
+    </div>
   `;
 }
 
