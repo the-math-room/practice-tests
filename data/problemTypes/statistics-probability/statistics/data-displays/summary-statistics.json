@@ -1,0 +1,59 @@
+{
+  "id": "stats-summary-statistics-placeholder",
+  "type": "statistics.summary_statistics.placeholder",
+  "title": "Summary Statistics Placeholder",
+  "category": "Statistics",
+  "topic": "Summary Statistics",
+  "subtopic": "Mean, Median, Mode, and Range",
+  "levels": ["integrated-math-1"],
+  "difficulty": 2,
+  "tags": [
+    "statistics",
+    "mean",
+    "median",
+    "mode",
+    "range",
+    "placeholder"
+  ],
+  "standards": [],
+  "params": {},
+  "computed": {},
+  "template": {
+    "prompt": [
+      {
+        "kind": "text",
+        "content": "Placeholder: This problem will ask students to calculate and compare summary statistics for a small data set."
+      },
+      {
+        "kind": "text",
+        "content": "Future version: Generate a list of 7–10 integer data values, then ask for the mean, median, mode, and range."
+      }
+    ],
+    "answer": {
+      "kind": "text",
+      "content": "Placeholder answer: The final answer will include the calculated mean, median, mode, and range."
+    },
+    "steps": [
+      {
+        "kind": "text",
+        "content": "Step 1: Order the data from least to greatest."
+      },
+      {
+        "kind": "text",
+        "content": "Step 2: Find the median from the ordered list."
+      },
+      {
+        "kind": "text",
+        "content": "Step 3: Add the values and divide by the number of values to find the mean."
+      },
+      {
+        "kind": "text",
+        "content": "Step 4: Identify the mode, if any."
+      },
+      {
+        "kind": "text",
+        "content": "Step 5: Subtract the minimum value from the maximum value to find the range."
+      }
+    ]
+  }
+}

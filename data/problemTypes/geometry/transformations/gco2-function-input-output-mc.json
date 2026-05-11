@@ -1,0 +1,60 @@
+{
+  "id": "geo-gco2-function-input-output-mc",
+  "type": "geometry.transformations.function_input_output_mc",
+  "title": "Transformations as Functions",
+  "category": "Geometry",
+  "topic": "Transformations",
+  "subtopic": "Input and Output Points",
+  "levels": ["integrated-math-1"],
+  "difficulty": 2,
+  "bloomsLevel": "Understand",
+  "questionFormat": "multiple-choice",
+  "assessmentRole": "supporting",
+  "testWeight": "light",
+  "shuffleChoices": true,
+  "standards": ["G-CO.2"],
+  "tags": [
+    "transformations",
+    "functions",
+    "input-output",
+    "coordinate-plane"
+  ],
+  "params": {},
+  "computed": {},
+  "template": {
+    "prompt": [
+      {
+        "kind": "text",
+        "content": "Why can a transformation in the plane be described as a function?"
+      }
+    ],
+    "choices": [
+      {
+        "id": "correct",
+        "content": "Each input point in the plane is assigned to exactly one output point."
+      },
+      {
+        "id": "always-line",
+        "content": "Every transformation creates a straight line."
+      },
+      {
+        "id": "always-increases",
+        "content": "Every transformation makes the figure larger."
+      },
+      {
+        "id": "two-outputs",
+        "content": "Each input point is assigned to two or more output points."
+      }
+    ],
+    "answer": {
+      "kind": "choice",
+      "choiceId": "correct"
+    },
+    "steps": [
+      {
+        "kind": "text",
+        "content": "A function assigns each input to exactly one output. A transformation assigns each point in the plane to one image point."
+      }
+    ]
+  }
+}

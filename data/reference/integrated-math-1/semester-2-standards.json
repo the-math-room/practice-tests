@@ -1,0 +1,174 @@
+{
+  "courseId": "integrated-math-1",
+  "title": "Integrated Math 1 Standards Reference",
+  "sourceNote": "Approximate semester standards based on school coverage.",
+  "domains": [
+    {
+      "domain": "Geometry",
+      "standards": [
+        {
+          "id": "G-CO.1",
+          "discipline": "Congruence",
+          "conceptualCategory": "Geometry",
+          "cluster": "Experiment with transformations in the plane",
+          "description": "Know precise definitions of angle, circle, perpendicular line, parallel line, and line segment, based on the undefined notions of point, line, distance along a line, and distance around a circular arc."
+        },
+        {
+          "id": "G-CO.2",
+          "discipline": "Congruence",
+          "conceptualCategory": "Geometry",
+          "cluster": "Experiment with transformations in the plane",
+          "description": "Represent transformations in the plane using, e.g., transparencies and geometry software; describe transformations as functions that take points in the plane as inputs and give other points as outputs. Compare transformations that preserve distance and angle to those that do not (e.g., translation versus horizontal stretch)."
+        },
+        {
+          "id": "G-CO.3",
+          "discipline": "Congruence",
+          "conceptualCategory": "Geometry",
+          "cluster": "Experiment with transformations in the plane",
+          "description": "Given a rectangle, parallelogram, trapezoid, or regular polygon, describe the rotations and reflections that carry it onto itself."
+        },
+        {
+          "id": "G-CO.4",
+          "discipline": "Congruence",
+          "conceptualCategory": "Geometry",
+          "cluster": "Experiment with transformations in the plane",
+          "description": "Develop definitions of rotations, reflections, and translations in terms of angles, circles, perpendicular lines, parallel lines, and line segments."
+        },
+        {
+          "id": "G-CO.5",
+          "discipline": "Congruence",
+          "conceptualCategory": "Geometry",
+          "cluster": "Experiment with transformations in the plane",
+          "description": "Given a geometric figure and a rotation, reflection, or translation, draw the transformed figure using, e.g., graph paper, tracing paper, or geometry software. Specify a sequence of transformations that will carry a given figure onto another."
+        },
+        {
+          "id": "G-CO.6",
+          "discipline": "Congruence",
+          "conceptualCategory": "Geometry",
+          "cluster": "Understand congruence in terms of rigid motions",
+          "description": "Use geometric descriptions of rigid motions to transform figures and to predict the effect of a given rigid motion on a given figure; given two figures, use the definition of congruence in terms of rigid motions to decide if they are congruent.",
+          "notes": "Build on rigid motions as a familiar starting point for development of concept of geometric proof."
+        },
+        {
+          "id": "G-CO.7",
+          "discipline": "Congruence",
+          "conceptualCategory": "Geometry",
+          "cluster": "Understand congruence in terms of rigid motions",
+          "description": "Use the definition of congruence in terms of rigid motions to show that two triangles are congruent if and only if corresponding pairs of sides and corresponding pairs of angles are congruent.",
+          "notes": "Build on rigid motions as a familiar starting point for development of concept of geometric proof."
+        },
+        {
+          "id": "G-CO.8",
+          "discipline": "Congruence",
+          "conceptualCategory": "Geometry",
+          "cluster": "Understand congruence in terms of rigid motions",
+          "description": "Explain how the criteria for triangle congruence (ASA, SAS, and SSS) follow from the definition of congruence in terms of rigid motions.",
+          "notes": "Build on rigid motions as a familiar starting point for development of concept of geometric proof."
+        },
+        {
+          "id": "G-GPE.4",
+          "discipline": "Expressing Geometric Properties with Equations",
+          "conceptualCategory": "Geometry",
+          "cluster": "Use coordinates to prove simple geometric theorems algebraically",
+          "description": "Use coordinates to prove simple geometric theorems algebraically. For example, prove or disprove that a figure defined by four given points in the coordinate plane is a rectangle; prove or disprove that a given point lies on a circle centered at the origin and containing another given point.",
+          "notes": "Include distance formula; relate to Pythagorean Theorem."
+        },
+        {
+          "id": "G-GPE.5",
+          "discipline": "Expressing Geometric Properties with Equations",
+          "conceptualCategory": "Geometry",
+          "cluster": "Use coordinates to prove simple geometric theorems algebraically",
+          "description": "Prove the slope criteria for parallel and perpendicular lines and use them to solve geometric problems (e.g., find the equation of a line parallel or perpendicular to a given line that passes through a given point).",
+          "notes": "Include distance formula; relate to Pythagorean Theorem."
+        },
+        {
+          "id": "G-GPE.7",
+          "discipline": "Expressing Geometric Properties with Equations",
+          "conceptualCategory": "Geometry",
+          "cluster": "Use coordinates to prove simple geometric theorems algebraically",
+          "description": "Use coordinates to compute perimeters of polygons and areas of triangles and rectangles, e.g., using the distance formula.",
+          "notes": "Include distance formula; relate to Pythagorean Theorem."
+        }
+      ]
+    },
+    {
+      "domain": "Statistics and Probability",
+      "standards": [
+        {
+          "id": "S-ID.1",
+          "discipline": "Interpreting Categorical and Quantitative Data",
+          "conceptualCategory": "Statistics and Probability",
+          "cluster": "Summarize, represent, and interpret data on a single count or measurement variable",
+          "description": "Represent data with plots on the real number line (dot plots, histograms, and box plots)."
+        },
+        {
+          "id": "S-ID.2",
+          "discipline": "Interpreting Categorical and Quantitative Data",
+          "conceptualCategory": "Statistics and Probability",
+          "cluster": "Summarize, represent, and interpret data on a single count or measurement variable",
+          "description": "Use statistics appropriate to the shape of the data distribution to compare center (median, mean) and spread (interquartile range, standard deviation) of two or more different data sets."
+        },
+        {
+          "id": "S-ID.3",
+          "discipline": "Interpreting Categorical and Quantitative Data",
+          "conceptualCategory": "Statistics and Probability",
+          "cluster": "Summarize, represent, and interpret data on a single count or measurement variable",
+          "description": "Interpret differences in shape, center, and spread in the context of the data sets, accounting for possible effects of extreme data points (outliers)."
+        },
+        {
+          "id": "S-ID.5",
+          "discipline": "Interpreting Categorical and Quantitative Data",
+          "conceptualCategory": "Statistics and Probability",
+          "cluster": "Summarize, represent, and interpret data on two categorical and quantitative variables",
+          "description": "Summarize categorical data for two categories in two-way frequency tables. Interpret relative frequencies in the context of the data (including joint, marginal, and conditional relative frequencies). Recognize possible associations and trends in the data.",
+          "notes": "Linear focus; discuss general principle."
+        },
+        {
+          "id": "S-ID.6.a",
+          "discipline": "Interpreting Categorical and Quantitative Data",
+          "conceptualCategory": "Statistics and Probability",
+          "cluster": "Summarize, represent, and interpret data on two categorical and quantitative variables",
+          "description": "Represent data on two quantitative variables on a scatter plot, and describe how the variables are related. Fit a function to the data; use functions fitted to data to solve problems in the context of the data. Use given functions or choose a function suggested by the context. Emphasize linear, quadratic, and exponential models.",
+          "notes": "Linear focus; discuss general principle."
+        },
+        {
+          "id": "S-ID.6.b",
+          "discipline": "Interpreting Categorical and Quantitative Data",
+          "conceptualCategory": "Statistics and Probability",
+          "cluster": "Summarize, represent, and interpret data on two categorical and quantitative variables",
+          "description": "Represent data on two quantitative variables on a scatter plot, and describe how the variables are related. Informally assess the fit of a function by plotting and analyzing residuals.",
+          "notes": "Linear focus; discuss general principle."
+        },
+        {
+          "id": "S-ID.6.c",
+          "discipline": "Interpreting Categorical and Quantitative Data",
+          "conceptualCategory": "Statistics and Probability",
+          "cluster": "Summarize, represent, and interpret data on two categorical and quantitative variables",
+          "description": "Represent data on two quantitative variables on a scatter plot, and describe how the variables are related. Fit a linear function for a scatter plot that suggests a linear association.",
+          "notes": "Linear focus; discuss general principle."
+        },
+        {
+          "id": "S-ID.7",
+          "discipline": "Interpreting Categorical and Quantitative Data",
+          "conceptualCategory": "Statistics and Probability",
+          "cluster": "Interpret linear models",
+          "description": "Interpret the slope (rate of change) and the intercept (constant term) of a linear model in the context of the data."
+        },
+        {
+          "id": "S-ID.8",
+          "discipline": "Interpreting Categorical and Quantitative Data",
+          "conceptualCategory": "Statistics and Probability",
+          "cluster": "Interpret linear models",
+          "description": "Compute (using technology) and interpret the correlation coefficient of a linear fit."
+        },
+        {
+          "id": "S-ID.9",
+          "discipline": "Interpreting Categorical and Quantitative Data",
+          "conceptualCategory": "Statistics and Probability",
+          "cluster": "Interpret linear models",
+          "description": "Distinguish between correlation and causation."
+        }
+      ]
+    }
+  ]
+}

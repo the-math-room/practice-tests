@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Math Practice Tool</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:,">
+  
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["\\(", "\\)"]],
+        displayMath: [["\\[", "\\]"]]
+      },
+      svg: {
+        fontCache: "global"
+      }
+    };
+  </script>
+
+  <script
+    id="MathJax-script"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+  </script>
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1>Math Practice</h1>
+
+      <section class="practice-set-picker">
+        <label for="practice-set-select">Choose practice set:</label>
+        <select id="practice-set-select"></select>
+      </section>
+
+      <p id="problem-count" class="muted"></p>
+    </header>
+
+    <section id="problem-card" class="problem-card"></section>
+
+    <nav class="controls" aria-label="Problem navigation">
+      <button id="prev-btn">Previous</button>
+      <button id="goto-btn">Go To</button>
+      <button id="next-btn">Next</button>
+    </nav>
+
+    <section class="actions" aria-label="Problem actions">
+      <button id="show-answer-btn" aria-pressed="false">Show Answer</button>
+      <button id="show-steps-btn" aria-pressed="false">Show Steps</button>
+      <button id="new-problem-btn">New Problem</button>
+      <button id="show-all-btn">Show All Problems</button>
+    </section>
+
+    <section id="all-problems-container" class="all-problems hidden"></section>
+  </main>
+
+  <dialog id="goto-dialog">
+    <form method="dialog" class="dialog-card">
+      <h2>Choose a Problem</h2>
+      <div id="goto-list" class="goto-list"></div>
+      <button value="close">Close</button>
+    </form>
+  </dialog>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

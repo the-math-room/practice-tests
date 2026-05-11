@@ -1,0 +1,61 @@
+{
+  "id": "geo-gco2-rigid-vs-nonrigid-mc",
+  "type": "geometry.transformations.rigid_vs_nonrigid_mc",
+  "title": "Rigid and Non-Rigid Transformations",
+  "category": "Geometry",
+  "topic": "Transformations",
+  "subtopic": "Preserving Distance and Angle",
+  "levels": ["integrated-math-1"],
+  "difficulty": 2,
+  "bloomsLevel": "Understand",
+  "questionFormat": "multiple-choice",
+  "assessmentRole": "core",
+  "testWeight": "medium",
+  "shuffleChoices": true,
+  "standards": ["G-CO.2"],
+  "tags": [
+    "transformations",
+    "rigid-motion",
+    "non-rigid",
+    "distance",
+    "angle"
+  ],
+  "params": {},
+  "computed": {},
+  "template": {
+    "prompt": [
+      {
+        "kind": "text",
+        "content": "Which transformation does not necessarily preserve both distance and angle measure?"
+      }
+    ],
+    "choices": [
+      {
+        "id": "translation",
+        "content": "A translation"
+      },
+      {
+        "id": "rotation",
+        "content": "A rotation"
+      },
+      {
+        "id": "reflection",
+        "content": "A reflection"
+      },
+      {
+        "id": "correct",
+        "content": "A horizontal stretch"
+      }
+    ],
+    "answer": {
+      "kind": "choice",
+      "choiceId": "correct"
+    },
+    "steps": [
+      {
+        "kind": "text",
+        "content": "Translations, rotations, and reflections are rigid motions, so they preserve distance and angle measure. A horizontal stretch changes distances and may change angle measures."
+      }
+    ]
+  }
+}

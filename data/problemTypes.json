@@ -1,0 +1,137 @@
+[
+  {
+    "id": "linear-equation-one-step",
+    "type": "algebra.linear_equation.one_step",
+    "title": "One-Step Linear Equation",
+    "category": "Algebra",
+    "params": {
+      "a": { "type": "int", "min": 2, "max": 12 },
+      "x": { "type": "int", "min": 1, "max": 15 }
+    },
+    "computed": {
+      "c": "a * x"
+    },
+    "template": {
+      "prompt": [
+        {
+          "kind": "text",
+          "content": "Solve for x:"
+        },
+        {
+          "kind": "math",
+          "content": "{{a}}x = {{c}}"
+        }
+      ],
+      "answer": {
+        "kind": "math",
+        "content": "x = {{x}}"
+      },
+      "steps": [
+        {
+          "kind": "math",
+          "content": "{{a}}x = {{c}}"
+        },
+        {
+          "kind": "math",
+          "content": "x = \\frac{ {{c}} }{ {{a}} }"
+        },
+        {
+          "kind": "math",
+          "content": "x = {{x}}"
+        }
+      ]
+    }
+  },
+  {
+    "id": "linear-equation-two-step",
+    "type": "algebra.linear_equation.two_step",
+    "title": "Two-Step Linear Equation",
+    "category": "Algebra",
+    "params": {
+      "a": { "type": "int", "min": 2, "max": 10 },
+      "b": { "type": "int", "min": 1, "max": 20 },
+      "x": { "type": "int", "min": 1, "max": 12 }
+    },
+    "computed": {
+      "c": "a * x + b",
+      "ax": "a * x"
+    },
+    "template": {
+      "prompt": [
+        {
+          "kind": "text",
+          "content": "Solve for x:"
+        },
+        {
+          "kind": "math",
+          "content": "{{a}}x + {{b}} = {{c}}"
+        }
+      ],
+      "answer": {
+        "kind": "math",
+        "content": "x = {{x}}"
+      },
+      "steps": [
+        {
+          "kind": "math",
+          "content": "{{a}}x + {{b}} = {{c}}"
+        },
+        {
+          "kind": "math",
+          "content": "{{a}}x = {{c}} - {{b}}"
+        },
+        {
+          "kind": "math",
+          "content": "{{a}}x = {{ax}}"
+        },
+        {
+          "kind": "math",
+          "content": "x = {{x}}"
+        }
+      ]
+    }
+  },
+  {
+    "id": "triangle-area",
+    "type": "geometry.area.triangle",
+    "title": "Triangle Area",
+    "category": "Geometry",
+    "params": {
+      "base": { "type": "int", "min": 6, "max": 18 },
+      "height": { "type": "int", "min": 4, "max": 14 }
+    },
+    "computed": {
+      "area": "base * height / 2"
+    },
+    "template": {
+      "prompt": [
+        {
+          "kind": "text",
+          "content": "Find the area of the triangle."
+        },
+        {
+          "kind": "svg",
+          "content": "<svg viewBox='0 0 220 160' role='img' aria-label='Triangle with base {{base}} and height {{height}}'><polygon points='30,130 190,130 90,30' fill='none' stroke='black' stroke-width='3'/><line x1='90' y1='30' x2='90' y2='130' stroke='gray' stroke-dasharray='5 5'/><text x='100' y='85'>{{height}}</text><text x='105' y='150'>{{base}}</text></svg>"
+        }
+      ],
+      "answer": {
+        "kind": "math",
+        "content": "{{area}}\\text{ square units}"
+      },
+      "steps": [
+        {
+          "kind": "math",
+          "content": "A = \\frac{1}{2}bh"
+        },
+        {
+          "kind": "math",
+          "content": "A = \\frac{1}{2}({{base}})({{height}})"
+        },
+        {
+          "kind": "math",
+          "content": "A = {{area}}\\text{ square units}"
+        }
+      ]
+    }
+  }
+]

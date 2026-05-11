@@ -1,0 +1,60 @@
+{
+  "id": "geo-gco2-preserves-distance-angle-mc",
+  "type": "geometry.transformations.preserves_distance_angle_mc",
+  "title": "Preserving Distance and Angle",
+  "category": "Geometry",
+  "topic": "Transformations",
+  "subtopic": "Rigid Motions",
+  "levels": ["integrated-math-1"],
+  "difficulty": 2,
+  "bloomsLevel": "Understand",
+  "questionFormat": "multiple-choice",
+  "assessmentRole": "core",
+  "testWeight": "medium",
+  "shuffleChoices": true,
+  "standards": ["G-CO.2"],
+  "tags": [
+    "transformations",
+    "rigid-motion",
+    "distance",
+    "angle"
+  ],
+  "params": {},
+  "computed": {},
+  "template": {
+    "prompt": [
+      {
+        "kind": "text",
+        "content": "A transformation preserves distance and angle measure. Which statement must be true?"
+      }
+    ],
+    "choices": [
+      {
+        "id": "correct",
+        "content": "The image is congruent to the original figure."
+      },
+      {
+        "id": "larger",
+        "content": "The image is always larger than the original figure."
+      },
+      {
+        "id": "same-location",
+        "content": "The image must be in the same location as the original figure."
+      },
+      {
+        "id": "area-changes",
+        "content": "The area of the image must be different from the original figure."
+      }
+    ],
+    "answer": {
+      "kind": "choice",
+      "choiceId": "correct"
+    },
+    "steps": [
+      {
+        "kind": "text",
+        "content": "If distance and angle measure are preserved, the size and shape stay the same. The image is congruent to the original figure."
+      }
+    ]
+  }
+}

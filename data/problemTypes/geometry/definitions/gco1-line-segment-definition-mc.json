@@ -1,0 +1,59 @@
+{
+  "id": "geo-gco1-line-segment-definition-mc",
+  "type": "geometry.definitions.line_segment_mc",
+  "title": "Precise Definition of a Line Segment",
+  "category": "Geometry",
+  "topic": "Basic Geometry Definitions",
+  "subtopic": "Line Segment",
+  "levels": ["integrated-math-1"],
+  "difficulty": 1,
+  "bloomsLevel": "Remember",
+  "questionFormat": "multiple-choice",
+  "assessmentRole": "foundation",
+  "testWeight": "light",
+  "shuffleChoices": true,
+  "standards": ["G-CO.1"],
+  "tags": [
+    "definitions",
+    "precise-language",
+    "line-segment"
+  ],
+  "params": {},
+  "computed": {},
+  "template": {
+    "prompt": [
+      {
+        "kind": "text",
+        "content": "Which statement best defines a line segment?"
+      }
+    ],
+    "choices": [
+      {
+        "id": "line-forever",
+        "content": "A line that extends forever in both directions"
+      },
+      {
+        "id": "correct",
+        "content": "Part of a line with two endpoints"
+      },
+      {
+        "id": "two-rays",
+        "content": "Two rays that share a common endpoint"
+      },
+      {
+        "id": "curved-path",
+        "content": "A path made of curved points"
+      }
+    ],
+    "answer": {
+      "kind": "choice",
+      "choiceId": "correct"
+    },
+    "steps": [
+      {
+        "kind": "text",
+        "content": "A line segment is part of a line with two endpoints. A full line extends forever in both directions."
+      }
+    ]
+  }
+}

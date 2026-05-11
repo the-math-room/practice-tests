@@ -1,0 +1,59 @@
+{
+  "id": "geo-gco1-parallel-definition-mc",
+  "type": "geometry.definitions.parallel_lines_mc",
+  "title": "Precise Definition of Parallel Lines",
+  "category": "Geometry",
+  "topic": "Basic Geometry Definitions",
+  "subtopic": "Parallel Lines",
+  "levels": ["integrated-math-1"],
+  "difficulty": 1,
+  "bloomsLevel": "Understand",
+  "questionFormat": "multiple-choice",
+  "assessmentRole": "foundation",
+  "testWeight": "light",
+  "shuffleChoices": true,
+  "standards": ["G-CO.1"],
+  "tags": [
+    "definitions",
+    "precise-language",
+    "parallel-lines"
+  ],
+  "params": {},
+  "computed": {},
+  "template": {
+    "prompt": [
+      {
+        "kind": "text",
+        "content": "A student says, “Parallel lines are lines that go in the same direction.” Which revision makes the definition mathematically precise?"
+      }
+    ],
+    "choices": [
+      {
+        "id": "same-length",
+        "content": "Parallel lines are lines that are always the same length."
+      },
+      {
+        "id": "correct",
+        "content": "Parallel lines are lines in the same plane that do not intersect."
+      },
+      {
+        "id": "equal-angles",
+        "content": "Parallel lines are lines that intersect to form equal angles."
+      },
+      {
+        "id": "one-point",
+        "content": "Parallel lines are lines that share exactly one point."
+      }
+    ],
+    "answer": {
+      "kind": "choice",
+      "choiceId": "correct"
+    },
+    "steps": [
+      {
+        "kind": "text",
+        "content": "Parallel lines must be in the same plane and must not intersect. “Go in the same direction” is informal and incomplete."
+      }
+    ]
+  }
+}

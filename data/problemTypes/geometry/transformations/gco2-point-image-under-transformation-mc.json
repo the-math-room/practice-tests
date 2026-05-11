@@ -1,0 +1,78 @@
+{
+  "id": "geo-gco2-point-image-under-transformation-mc",
+  "type": "geometry.transformations.point_image_mc",
+  "title": "Image of a Point Under a Transformation",
+  "category": "Geometry",
+  "topic": "Transformations",
+  "subtopic": "Coordinate Rules",
+  "levels": ["integrated-math-1"],
+  "difficulty": 2,
+  "bloomsLevel": "Apply",
+  "questionFormat": "multiple-choice",
+  "assessmentRole": "core",
+  "testWeight": "medium",
+  "shuffleChoices": true,
+  "standards": ["G-CO.2"],
+  "tags": [
+    "transformations",
+    "coordinates",
+    "image",
+    "function"
+  ],
+  "params": {
+    "x": { "type": "int", "min": -6, "max": 6 },
+    "y": { "type": "int", "min": -6, "max": 6 },
+    "dx": { "type": "int", "min": 2, "max": 5 },
+    "dy": { "type": "int", "min": 1, "max": 5 }
+  },
+  "computed": {
+    "imageX": "x + dx",
+    "imageY": "y - dy",
+    "wrongX1": "x - dx",
+    "wrongY1": "y - dy",
+    "wrongX2": "x + dx",
+    "wrongY2": "y + dy",
+    "wrongX3": "x - dx",
+    "wrongY3": "y + dy"
+  },
+  "template": {
+    "prompt": [
+      {
+        "kind": "text",
+        "content": "Point A has coordinates ({{x}}, {{y}}). The transformation rule is (x, y) → (x + {{dx}}, y - {{dy}}). What are the coordinates of A′?"
+      }
+    ],
+    "choices": [
+      {
+        "id": "correct",
+        "content": "({{imageX}}, {{imageY}})"
+      },
+      {
+        "id": "wrong-x",
+        "content": "({{wrongX1}}, {{wrongY1}})"
+      },
+      {
+        "id": "wrong-y",
+        "content": "({{wrongX2}}, {{wrongY2}})"
+      },
+      {
+        "id": "wrong-both",
+        "content": "({{wrongX3}}, {{wrongY3}})"
+      }
+    ],
+    "answer": {
+      "kind": "choice",
+      "choiceId": "correct"
+    },
+    "steps": [
+      {
+        "kind": "text",
+        "content": "Use the rule on the input point. Add {{dx}} to the x-coordinate and subtract {{dy}} from the y-coordinate."
+      },
+      {
+        "kind": "math",
+        "content": "A' = ({{x}} + {{dx}}, {{y}} - {{dy}}) = ({{imageX}}, {{imageY}})"
+      }
+    ]
+  }
+}

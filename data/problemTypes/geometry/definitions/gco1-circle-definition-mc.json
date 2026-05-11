@@ -1,0 +1,52 @@
+{
+  "id": "geo-gco1-circle-definition-mc",
+  "type": "geometry.definitions.circle_mc",
+  "title": "Precise Definition of a Circle",
+  "category": "Geometry",
+  "topic": "Basic Geometry Definitions",
+  "subtopic": "Circle",
+  "levels": ["integrated-math-1"],
+  "difficulty": 1,
+  "bloomsLevel": "Understand",
+  "questionFormat": "multiple-choice",
+  "shuffleChoices": true,
+  "standards": ["G-CO.1"],
+  "params": {},
+  "computed": {},
+  "template": {
+    "prompt": [
+      {
+        "kind": "text",
+        "content": "Which is the most precise definition of a circle?"
+      }
+    ],
+    "choices": [
+      {
+        "id": "round-shape",
+        "content": "A round shape with no corners"
+      },
+      {
+        "id": "closed-curve",
+        "content": "A closed curve in the plane"
+      },
+      {
+        "id": "correct",
+        "content": "The set of all points in a plane that are the same distance from a fixed point"
+      },
+      {
+        "id": "curved-center",
+        "content": "A curved figure with a center"
+      }
+    ],
+    "answer": {
+      "kind": "choice",
+      "choiceId": "correct"
+    },
+    "steps": [
+      {
+        "kind": "text",
+        "content": "A circle is defined by all points in a plane that are the same distance from a fixed point, called the center."
+      }
+    ]
+  }
+}

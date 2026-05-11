@@ -1,0 +1,59 @@
+{
+  "id": "geo-gco1-perpendicular-definition-mc",
+  "type": "geometry.definitions.perpendicular_lines_mc",
+  "title": "Precise Definition of Perpendicular Lines",
+  "category": "Geometry",
+  "topic": "Basic Geometry Definitions",
+  "subtopic": "Perpendicular Lines",
+  "levels": ["integrated-math-1"],
+  "difficulty": 1,
+  "bloomsLevel": "Understand",
+  "questionFormat": "multiple-choice",
+  "assessmentRole": "foundation",
+  "testWeight": "light",
+  "shuffleChoices": true,
+  "standards": ["G-CO.1"],
+  "tags": [
+    "definitions",
+    "precise-language",
+    "perpendicular-lines"
+  ],
+  "params": {},
+  "computed": {},
+  "template": {
+    "prompt": [
+      {
+        "kind": "text",
+        "content": "If two lines are perpendicular, which statement must be true?"
+      }
+    ],
+    "choices": [
+      {
+        "id": "same-length",
+        "content": "They are the same length."
+      },
+      {
+        "id": "never-intersect",
+        "content": "They never intersect."
+      },
+      {
+        "id": "correct",
+        "content": "They intersect to form right angles."
+      },
+      {
+        "id": "share-endpoint",
+        "content": "They share exactly one endpoint."
+      }
+    ],
+    "answer": {
+      "kind": "choice",
+      "choiceId": "correct"
+    },
+    "steps": [
+      {
+        "kind": "text",
+        "content": "Perpendicular lines are lines that intersect to form right angles."
+      }
+    ]
+  }
+}

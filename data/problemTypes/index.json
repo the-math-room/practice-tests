@@ -1,0 +1,15 @@
+[
+  "statistics-probability/statistics/placeholder-summary-statistics.json",
+
+  "geometry/definitions/gco1-circle-definition-mc.json",
+  "geometry/definitions/gco1-line-segment-definition-mc.json",
+  "geometry/definitions/gco1-parallel-definition-mc.json",
+  "geometry/definitions/gco1-perpendicular-definition-mc.json",
+  "geometry/definitions/gco1-precise-language-error-mc.json",
+
+  "geometry/transformations/gco2-identify-translation-rule-mc.json",
+  "geometry/transformations/gco2-point-image-under-transformation-mc.json",
+  "geometry/transformations/gco2-rigid-vs-nonrigid-mc.json",
+  "geometry/transformations/gco2-preserves-distance-angle-mc.json",
+  "geometry/transformations/gco2-function-input-output-mc.json"
+]

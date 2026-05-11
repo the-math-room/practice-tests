@@ -1,0 +1,49 @@
+{
+  "id": "linear-equation-two-step",
+  "type": "algebra.linear_equation.two_step",
+  "title": "Two-Step Linear Equation",
+  "category": "Algebra",
+  "params": {
+    "a": { "type": "int", "min": 2, "max": 10 },
+    "b": { "type": "int", "min": 1, "max": 20 },
+    "x": { "type": "int", "min": 1, "max": 12 }
+  },
+  "computed": {
+    "c": "a * x + b",
+    "ax": "a * x"
+  },
+  "template": {
+    "prompt": [
+      {
+        "kind": "text",
+        "content": "Solve for x:"
+      },
+      {
+        "kind": "math",
+        "content": "{{a}}x + {{b}} = {{c}}"
+      }
+    ],
+    "answer": {
+      "kind": "math",
+      "content": "x = {{x}}"
+    },
+    "steps": [
+      {
+        "kind": "math",
+        "content": "{{a}}x + {{b}} = {{c}}"
+      },
+      {
+        "kind": "math",
+        "content": "{{a}}x = {{c}} - {{b}}"
+      },
+      {
+        "kind": "math",
+        "content": "{{a}}x = {{ax}}"
+      },
+      {
+        "kind": "math",
+        "content": "x = {{x}}"
+      }
+    ]
+  }
+}

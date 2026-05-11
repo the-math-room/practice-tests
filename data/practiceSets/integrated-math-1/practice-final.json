@@ -1,0 +1,81 @@
+{
+  "id": "im1-practice-final",
+  "title": "Integrated Math 1 Practice Final",
+  "course": "integrated-math-1",
+  "description": "Practice problems for the Integrated Math 1 final.",
+  "sections": [
+    {
+      "title": "Geometry Foundations",
+      "items": [
+        {
+          "type": "pool",
+          "title": "Precise Geometry Definitions",
+          "standards": ["G-CO.1"],
+          "count": 1,
+          "selection": "weighted-random",
+          "items": [
+            {
+              "problemTypeId": "geo-gco1-circle-definition-mc",
+              "weight": 1
+            },
+            {
+              "problemTypeId": "geo-gco1-parallel-definition-mc",
+              "weight": 1
+            },
+            {
+              "problemTypeId": "geo-gco1-perpendicular-definition-mc",
+              "weight": 1
+            },
+            {
+              "problemTypeId": "geo-gco1-line-segment-definition-mc",
+              "weight": 1
+            },
+            {
+              "problemTypeId": "geo-gco1-precise-language-error-mc",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "type": "pool",
+          "title": "Transformations in the Plane",
+          "standards": ["G-CO.2"],
+          "count": 1,
+          "selection": "weighted-random",
+          "items": [
+            {
+              "problemTypeId": "geo-gco2-identify-translation-rule-mc",
+              "weight": 2
+            },
+            {
+              "problemTypeId": "geo-gco2-point-image-under-transformation-mc",
+              "weight": 2
+            },
+            {
+              "problemTypeId": "geo-gco2-rigid-vs-nonrigid-mc",
+              "weight": 3
+            },
+            {
+              "problemTypeId": "geo-gco2-preserves-distance-angle-mc",
+              "weight": 3
+            },
+            {
+              "problemTypeId": "geo-gco2-function-input-output-mc",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Statistics",
+      "items": [
+        {
+          "type": "problem",
+          "problemTypeId": "stats-summary-statistics-placeholder",
+          "count": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "geo-gco2-identify-translation-rule-mc",
+  "type": "geometry.transformations.identify_translation_rule_mc",
+  "title": "Identify a Translation Rule",
+  "category": "Geometry",
+  "topic": "Transformations",
+  "subtopic": "Translations",
+  "levels": ["integrated-math-1"],
+  "difficulty": 1,
+  "bloomsLevel": "Understand",
+  "questionFormat": "multiple-choice",
+  "assessmentRole": "foundation",
+  "testWeight": "light",
+  "shuffleChoices": true,
+  "standards": ["G-CO.2"],
+  "tags": [
+    "transformations",
+    "translation",
+    "coordinate-plane",
+    "rigid-motion"
+  ],
+  "params": {
+    "dx": { "type": "int", "min": 2, "max": 6 },
+    "dy": { "type": "int", "min": 1, "max": 5 }
+  },
+  "computed": {},
+  "template": {
+    "prompt": [
+      {
+        "kind": "text",
+        "content": "A figure is translated {{dx}} units right and {{dy}} units up. Which rule represents this transformation?"
+      }
+    ],
+    "choices": [
+      {
+        "id": "correct",
+        "content": "(x, y) → (x + {{dx}}, y + {{dy}})"
+      },
+      {
+        "id": "wrong-left-up",
+        "content": "(x, y) → (x - {{dx}}, y + {{dy}})"
+      },
+      {
+        "id": "wrong-right-down",
+        "content": "(x, y) → (x + {{dx}}, y - {{dy}})"
+      },
+      {
+        "id": "wrong-scale",
+        "content": "(x, y) → ({{dx}}x, {{dy}}y)"
+      }
+    ],
+    "answer": {
+      "kind": "choice",
+      "choiceId": "correct"
+    },
+    "steps": [
+      {
+        "kind": "text",
+        "content": "Moving right adds to the x-coordinate, and moving up adds to the y-coordinate."
+      }
+    ]
+  }
+}

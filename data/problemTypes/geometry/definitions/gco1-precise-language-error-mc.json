@@ -1,0 +1,60 @@
+{
+  "id": "geo-gco1-precise-language-error-mc",
+  "type": "geometry.definitions.precise_language_error_mc",
+  "title": "Precise Geometry Language",
+  "category": "Geometry",
+  "topic": "Basic Geometry Definitions",
+  "subtopic": "Precise Language",
+  "levels": ["integrated-math-1"],
+  "difficulty": 1,
+  "bloomsLevel": "Understand",
+  "questionFormat": "multiple-choice",
+  "assessmentRole": "foundation",
+  "testWeight": "light",
+  "shuffleChoices": true,
+  "standards": ["G-CO.1"],
+  "tags": [
+    "definitions",
+    "precise-language",
+    "circle",
+    "misconceptions"
+  ],
+  "params": {},
+  "computed": {},
+  "template": {
+    "prompt": [
+      {
+        "kind": "text",
+        "content": "A student says, “A circle is a round shape.” Why is this definition not mathematically precise?"
+      }
+    ],
+    "choices": [
+      {
+        "id": "equal-sides",
+        "content": "It does not mention equal side lengths."
+      },
+      {
+        "id": "correct",
+        "content": "It does not describe a circle as points in a plane that are the same distance from a fixed point."
+      },
+      {
+        "id": "unit-radius",
+        "content": "It only describes circles that have a radius of 1."
+      },
+      {
+        "id": "segment",
+        "content": "It describes a line segment instead of a circle."
+      }
+    ],
+    "answer": {
+      "kind": "choice",
+      "choiceId": "correct"
+    },
+    "steps": [
+      {
+        "kind": "text",
+        "content": "“Round shape” is informal. A precise definition of a circle uses points in a plane that are all the same distance from a fixed point."
+      }
+    ]
+  }
+}

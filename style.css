@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f4f5f7;
+  color: #1f2937;
+}
+
+.app {
+  width: min(900px, calc(100% - 32px));
+  margin: 32px auto;
+}
+
+.app-header {
+  margin-bottom: 20px;
+}
+
+.app-header h1 {
+  margin: 0 0 12px;
+}
+
+.practice-set-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.practice-set-picker select {
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font: inherit;
+  background: white;
+}
+
+.muted {
+  color: #6b7280;
+}
+
+.problem-card,
+.problem-summary,
+.dialog-card,
+.all-problems {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.problem-card {
+  padding: 28px;
+  min-height: 320px;
+}
+
+.problem-meta {
+  margin-bottom: 12px;
+}
+
+.problem-type {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #3730a3;
+  font-size: 0.8rem;
+}
+
+.prompt {
+  font-size: 1.15rem;
+}
+
+.math {
+  font-family: "Times New Roman", serif;
+  font-size: 1.3rem;
+  background: #f9fafb;
+  border-radius: 10px;
+  padding: 12px;
+  overflow-x: auto;
+}
+
+.svg-wrap {
+  max-width: 320px;
+  margin: 20px 0;
+}
+
+.svg-wrap svg {
+  width: 100%;
+  height: auto;
+}
+
+.answer-panel,
+.steps-panel {
+  margin-top: 20px;
+  padding: 16px;
+  border-radius: 12px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+.controls,
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  background: #2563eb;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+button[aria-pressed="true"] {
+  background: #374151;
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  background: #2563eb;
+}
+
+.hidden {
+  display: none;
+}
+
+dialog {
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+
+dialog::backdrop {
+  background: rgba(15, 23, 42, 0.45);
+}
+
+.dialog-card {
+  width: min(520px, calc(100vw - 32px));
+  padding: 24px;
+}
+
+.goto-list {
+  display: grid;
+  gap: 8px;
+  margin: 16px 0;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.goto-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 12px;
+  text-align: left;
+  background: #f9fafb;
+  color: #111827;
+  border: 1px solid #e5e7eb;
+}
+
+.goto-item:hover {
+  background: #eef2ff;
+}
+
+.goto-item span {
+  grid-row: span 2;
+  font-weight: 700;
+}
+
+.goto-item small {
+  color: #6b7280;
+}
+
+.all-problems {
+  margin-top: 24px;
+  padding: 24px;
+}
+
+.problem-summary {
+  padding: 20px;
+  margin-top: 16px;
+  box-shadow: none;
+}
+
+@media print {
+  .controls,
+  .actions,
+  dialog {
+    display: none;
+  }
+
+  body {
+    background: white;
+  }
+
+  .problem-card,
+  .problem-summary,
+  .all-problems {
+    box-shadow: none;
+    border-color: #ccc;
+  }
+}
