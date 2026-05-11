@@ -1,0 +1,61 @@
+{
+  "id": "geo-gco6-non-rigid-motion-not-congruence-mc",
+  "type": "geometry.congruence.non_rigid_motion_not_congruence_mc",
+  "title": "Rigid and Non-Rigid Transformations",
+  "category": "Geometry",
+  "topic": "Congruence",
+  "subtopic": "Rigid vs Non-Rigid Motions",
+  "levels": ["integrated-math-1"],
+  "difficulty": 2,
+  "bloomsLevel": "Understand",
+  "questionFormat": "multiple-choice",
+  "assessmentRole": "core",
+  "testWeight": "medium",
+  "shuffleChoices": true,
+  "standards": ["G-CO.6"],
+  "tags": [
+    "congruence",
+    "rigid-motion",
+    "non-rigid-motion",
+    "dilation",
+    "stretch"
+  ],
+  "params": {},
+  "computed": {},
+  "template": {
+    "prompt": [
+      {
+        "kind": "text",
+        "content": "Which transformation would not necessarily produce a figure congruent to the original?"
+      }
+    ],
+    "choices": [
+      {
+        "id": "translation",
+        "content": "A translation"
+      },
+      {
+        "id": "rotation",
+        "content": "A rotation"
+      },
+      {
+        "id": "reflection",
+        "content": "A reflection"
+      },
+      {
+        "id": "correct",
+        "content": "A dilation with a scale factor of 2"
+      }
+    ],
+    "answer": {
+      "kind": "choice",
+      "choiceId": "correct"
+    },
+    "steps": [
+      {
+        "kind": "text",
+        "content": "Translations, rotations, and reflections are rigid motions, so they preserve congruence. A dilation with a scale factor other than 1 changes size, so it does not necessarily produce a congruent figure."
+      }
+    ]
+  }
+}

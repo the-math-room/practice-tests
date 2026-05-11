@@ -1,0 +1,81 @@
+{
+  "id": "geo-gco5-rotate-point-origin-mc",
+  "type": "geometry.transformations.rotate_point_origin_mc",
+  "title": "Rotate a Point About the Origin",
+  "category": "Geometry",
+  "topic": "Transformations",
+  "subtopic": "Rotations on the Coordinate Plane",
+  "levels": ["integrated-math-1"],
+  "difficulty": 2,
+  "bloomsLevel": "Apply",
+  "questionFormat": "multiple-choice",
+  "assessmentRole": "core",
+  "testWeight": "medium",
+  "shuffleChoices": true,
+  "standards": ["G-CO.5"],
+  "tags": [
+    "transformations",
+    "rotation",
+    "coordinate-plane",
+    "origin",
+    "point"
+  ],
+  "params": {
+    "x": { "type": "int", "min": 1, "max": 6 },
+    "y": { "type": "int", "min": 1, "max": 6 }
+  },
+  "computed": {
+    "imageX": "0 - y",
+    "imageY": "x",
+    "wrongX1": "y",
+    "wrongY1": "0 - x",
+    "wrongX2": "0 - x",
+    "wrongY2": "0 - y",
+    "wrongX3": "y",
+    "wrongY3": "x"
+  },
+  "template": {
+    "prompt": [
+      {
+        "kind": "text",
+        "content": "Point A({{x}}, {{y}}) is rotated 90° counterclockwise about the origin. What are the coordinates of A′?"
+      }
+    ],
+    "choices": [
+      {
+        "id": "correct",
+        "content": "({{imageX}}, {{imageY}})"
+      },
+      {
+        "id": "clockwise",
+        "content": "({{wrongX1}}, {{wrongY1}})"
+      },
+      {
+        "id": "one-eighty",
+        "content": "({{wrongX2}}, {{wrongY2}})"
+      },
+      {
+        "id": "swap-only",
+        "content": "({{wrongX3}}, {{wrongY3}})"
+      }
+    ],
+    "answer": {
+      "kind": "choice",
+      "choiceId": "correct"
+    },
+    "steps": [
+      {
+        "kind": "text",
+        "content": "A 90° counterclockwise rotation about the origin follows this rule:"
+      },
+      {
+        "kind": "math",
+        "content": "(x, y) \\rightarrow (-y, x)"
+      },
+      {
+        "kind": "math",
+        "content": "({{x}}, {{y}}) \\rightarrow ({{imageX}}, {{imageY}})"
+      }
+    ]
+  }
+}

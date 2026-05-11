@@ -1,0 +1,61 @@
+{
+  "id": "geo-gco6-rigid-motion-congruence-conclusion-mc",
+  "type": "geometry.congruence.rigid_motion_congruence_conclusion_mc",
+  "title": "Congruence from Rigid Motions",
+  "category": "Geometry",
+  "topic": "Congruence",
+  "subtopic": "Rigid Motions",
+  "levels": ["integrated-math-1"],
+  "difficulty": 2,
+  "bloomsLevel": "Understand",
+  "questionFormat": "multiple-choice",
+  "assessmentRole": "core",
+  "testWeight": "medium",
+  "shuffleChoices": true,
+  "standards": ["G-CO.6"],
+  "tags": [
+    "congruence",
+    "rigid-motion",
+    "translation",
+    "rotation",
+    "reflection"
+  ],
+  "params": {},
+  "computed": {},
+  "template": {
+    "prompt": [
+      {
+        "kind": "text",
+        "content": "Triangle A can be mapped exactly onto Triangle B using a translation followed by a rotation. What can you conclude?"
+      }
+    ],
+    "choices": [
+      {
+        "id": "correct",
+        "content": "The triangles are congruent."
+      },
+      {
+        "id": "similar-only",
+        "content": "The triangles are similar but not congruent."
+      },
+      {
+        "id": "different-angles",
+        "content": "The triangles must have different angle measures."
+      },
+      {
+        "id": "different-side-lengths",
+        "content": "The triangles must have different side lengths."
+      }
+    ],
+    "answer": {
+      "kind": "choice",
+      "choiceId": "correct"
+    },
+    "steps": [
+      {
+        "kind": "text",
+        "content": "Translations and rotations are rigid motions. Rigid motions preserve side lengths and angle measures, so the image is congruent to the original figure."
+      }
+    ]
+  }
+}

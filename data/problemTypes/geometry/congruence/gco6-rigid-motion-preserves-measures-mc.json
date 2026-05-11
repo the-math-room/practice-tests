@@ -1,0 +1,61 @@
+{
+  "id": "geo-gco6-rigid-motion-preserves-measures-mc",
+  "type": "geometry.congruence.rigid_motion_preserves_measures_mc",
+  "title": "What Rigid Motions Preserve",
+  "category": "Geometry",
+  "topic": "Congruence",
+  "subtopic": "Properties Preserved by Rigid Motions",
+  "levels": ["integrated-math-1"],
+  "difficulty": 2,
+  "bloomsLevel": "Understand",
+  "questionFormat": "multiple-choice",
+  "assessmentRole": "core",
+  "testWeight": "medium",
+  "shuffleChoices": true,
+  "standards": ["G-CO.6"],
+  "tags": [
+    "congruence",
+    "rigid-motion",
+    "distance",
+    "angle-measure",
+    "side-length"
+  ],
+  "params": {},
+  "computed": {},
+  "template": {
+    "prompt": [
+      {
+        "kind": "text",
+        "content": "A figure is transformed using a rigid motion. Which statement must be true?"
+      }
+    ],
+    "choices": [
+      {
+        "id": "correct",
+        "content": "The image has the same side lengths and angle measures as the original figure."
+      },
+      {
+        "id": "larger",
+        "content": "The image is larger than the original figure."
+      },
+      {
+        "id": "same-location",
+        "content": "The image must be in the exact same location as the original figure."
+      },
+      {
+        "id": "different-shape",
+        "content": "The image has the same area but a different shape."
+      }
+    ],
+    "answer": {
+      "kind": "choice",
+      "choiceId": "correct"
+    },
+    "steps": [
+      {
+        "kind": "text",
+        "content": "Rigid motions preserve distances and angle measures. Therefore, the image has the same size and shape as the original figure."
+      }
+    ]
+  }
+}

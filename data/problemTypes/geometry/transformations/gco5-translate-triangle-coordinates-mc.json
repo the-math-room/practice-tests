@@ -1,0 +1,107 @@
+{
+  "id": "geo-gco5-translate-triangle-coordinates-mc",
+  "type": "geometry.transformations.translate_triangle_coordinates_mc",
+  "title": "Translate a Triangle",
+  "category": "Geometry",
+  "topic": "Transformations",
+  "subtopic": "Translations on the Coordinate Plane",
+  "levels": ["integrated-math-1"],
+  "difficulty": 2,
+  "bloomsLevel": "Apply",
+  "questionFormat": "multiple-choice",
+  "assessmentRole": "core",
+  "testWeight": "medium",
+  "shuffleChoices": true,
+  "standards": ["G-CO.5"],
+  "tags": [
+    "transformations",
+    "translation",
+    "coordinate-plane",
+    "triangle",
+    "image"
+  ],
+  "params": {
+    "ax": { "type": "int", "min": -5, "max": 2 },
+    "ay": { "type": "int", "min": -3, "max": 4 },
+    "dx": { "type": "int", "min": 2, "max": 6 },
+    "dy": { "type": "int", "min": 1, "max": 5 }
+  },
+  "computed": {
+    "bx": "ax + 3",
+    "by": "ay",
+    "cx": "ax + 1",
+    "cy": "ay + 3",
+
+    "apx": "ax + dx",
+    "apy": "ay - dy",
+    "bpx": "bx + dx",
+    "bpy": "by - dy",
+    "cpx": "cx + dx",
+    "cpy": "cy - dy",
+
+    "wrongA1x": "ax - dx",
+    "wrongA1y": "ay - dy",
+    "wrongB1x": "bx - dx",
+    "wrongB1y": "by - dy",
+    "wrongC1x": "cx - dx",
+    "wrongC1y": "cy - dy",
+
+    "wrongA2x": "ax + dx",
+    "wrongA2y": "ay + dy",
+    "wrongB2x": "bx + dx",
+    "wrongB2y": "by + dy",
+    "wrongC2x": "cx + dx",
+    "wrongC2y": "cy + dy",
+
+    "wrongA3x": "ax - dx",
+    "wrongA3y": "ay + dy",
+    "wrongB3x": "bx - dx",
+    "wrongB3y": "by + dy",
+    "wrongC3x": "cx - dx",
+    "wrongC3y": "cy + dy"
+  },
+  "template": {
+    "prompt": [
+      {
+        "kind": "text",
+        "content": "Triangle ABC has vertices A({{ax}}, {{ay}}), B({{bx}}, {{by}}), and C({{cx}}, {{cy}}). The triangle is translated {{dx}} units right and {{dy}} units down. Which coordinates represent A′B′C′?"
+      }
+    ],
+    "choices": [
+      {
+        "id": "correct",
+        "content": "A′({{apx}}, {{apy}}), B′({{bpx}}, {{bpy}}), C′({{cpx}}, {{cpy}})"
+      },
+      {
+        "id": "left-down",
+        "content": "A′({{wrongA1x}}, {{wrongA1y}}), B′({{wrongB1x}}, {{wrongB1y}}), C′({{wrongC1x}}, {{wrongC1y}})"
+      },
+      {
+        "id": "right-up",
+        "content": "A′({{wrongA2x}}, {{wrongA2y}}), B′({{wrongB2x}}, {{wrongB2y}}), C′({{wrongC2x}}, {{wrongC2y}})"
+      },
+      {
+        "id": "left-up",
+        "content": "A′({{wrongA3x}}, {{wrongA3y}}), B′({{wrongB3x}}, {{wrongB3y}}), C′({{wrongC3x}}, {{wrongC3y}})"
+      }
+    ],
+    "answer": {
+      "kind": "choice",
+      "choiceId": "correct"
+    },
+    "steps": [
+      {
+        "kind": "text",
+        "content": "A translation moves every point the same distance in the same direction."
+      },
+      {
+        "kind": "text",
+        "content": "Moving {{dx}} units right adds {{dx}} to each x-coordinate. Moving {{dy}} units down subtracts {{dy}} from each y-coordinate."
+      },
+      {
+        "kind": "math",
+        "content": "(x, y) \\rightarrow (x + {{dx}}, y - {{dy}})"
+      }
+    ]
+  }
+}

@@ -122,6 +122,62 @@
               "weight": 3
             }
           ]
+        },
+
+        {
+          "type": "pool",
+          "title": "Transform Figures Using Rigid Motions",
+          "standards": ["G-CO.5"],
+          "count": 1,
+          "selection": "weighted-random",
+          "items": [
+            {
+              "problemTypeId": "geo-gco5-translate-triangle-coordinates-mc",
+              "weight": 1
+            },
+            {
+              "problemTypeId": "geo-gco5-reflect-triangle-y-axis-mc",
+              "weight": 1
+            },
+            {
+              "problemTypeId": "geo-gco5-rotate-point-origin-mc",
+              "weight": 1
+            },
+            {
+              "problemTypeId": "geo-gco5-sequence-translation-reflection-mc",
+              "weight": 1
+            }
+          ]
+        },
+
+        {
+          "type": "pool",
+          "title": "Congruence Using Rigid Motions",
+          "standards": ["G-CO.6"],
+          "count": 1,
+          "selection": "weighted-random",
+          "items": [
+            {
+              "problemTypeId": "geo-gco6-rigid-motion-congruence-conclusion-mc",
+              "weight": 1
+            },
+            {
+              "problemTypeId": "geo-gco6-sequence-proves-congruence-mc",
+              "weight": 1
+            },
+            {
+              "problemTypeId": "geo-gco6-non-rigid-motion-not-congruence-mc",
+              "weight": 1
+            },
+            {
+              "problemTypeId": "geo-gco6-rigid-motion-preserves-measures-mc",
+              "weight": 1
+            },
+            {
+              "problemTypeId": "geo-gco6-svg-congruent-figures-explanation-mc",
+              "weight": 1
+            }
+          ]
         }
 
       ]

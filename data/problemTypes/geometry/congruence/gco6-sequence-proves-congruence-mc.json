@@ -1,0 +1,60 @@
+{
+  "id": "geo-gco6-sequence-proves-congruence-mc",
+  "type": "geometry.congruence.sequence_proves_congruence_mc",
+  "title": "Sequence That Proves Congruence",
+  "category": "Geometry",
+  "topic": "Congruence",
+  "subtopic": "Rigid Motions",
+  "levels": ["integrated-math-1"],
+  "difficulty": 2,
+  "bloomsLevel": "Apply",
+  "questionFormat": "multiple-choice",
+  "assessmentRole": "core",
+  "testWeight": "medium",
+  "shuffleChoices": true,
+  "standards": ["G-CO.6"],
+  "tags": [
+    "congruence",
+    "rigid-motion",
+    "transformation-sequence",
+    "non-rigid-motion"
+  ],
+  "params": {},
+  "computed": {},
+  "template": {
+    "prompt": [
+      {
+        "kind": "text",
+        "content": "Which sequence of transformations could be used to prove that two figures are congruent?"
+      }
+    ],
+    "choices": [
+      {
+        "id": "correct",
+        "content": "Translate the first figure, then rotate it."
+      },
+      {
+        "id": "dilate-translate",
+        "content": "Dilate the first figure by a scale factor of 2, then translate it."
+      },
+      {
+        "id": "stretch-reflect",
+        "content": "Stretch the first figure horizontally, then reflect it."
+      },
+      {
+        "id": "dilate-rotate",
+        "content": "Dilate the first figure by a scale factor of 1/2, then rotate it."
+      }
+    ],
+    "answer": {
+      "kind": "choice",
+      "choiceId": "correct"
+    },
+    "steps": [
+      {
+        "kind": "text",
+        "content": "Congruence can be shown using rigid motions only. Translations, rotations, and reflections preserve size and shape. Dilations and stretches do not necessarily preserve congruence."
+      }
+    ]
+  }
+}

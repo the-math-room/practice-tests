@@ -23,5 +23,16 @@
   "geometry/transformations/gco4-reflection-definition-mc.json",
   "geometry/transformations/gco4-translation-definition-mc.json",
   "geometry/transformations/gco4-reflection-perpendicular-distance-mc.json",
-  "geometry/transformations/gco4-rotation-circle-angle-mc.json"
+  "geometry/transformations/gco4-rotation-circle-angle-mc.json",
+
+  "geometry/transformations/gco5-translate-triangle-coordinates-mc.json",
+  "geometry/transformations/gco5-reflect-triangle-y-axis-mc.json",
+  "geometry/transformations/gco5-rotate-point-origin-mc.json",
+  "geometry/transformations/gco5-sequence-translation-reflection-mc.json",
+
+  "geometry/congruence/gco6-rigid-motion-congruence-conclusion-mc.json",
+  "geometry/congruence/gco6-sequence-proves-congruence-mc.json",
+  "geometry/congruence/gco6-non-rigid-motion-not-congruence-mc.json",
+  "geometry/congruence/gco6-rigid-motion-preserves-measures-mc.json",
+  "geometry/congruence/gco6-svg-congruent-figures-explanation-mc.json"
 ]

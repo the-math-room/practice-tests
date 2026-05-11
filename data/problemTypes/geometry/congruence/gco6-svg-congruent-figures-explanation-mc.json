@@ -1,0 +1,65 @@
+{
+  "id": "geo-gco6-svg-congruent-figures-explanation-mc",
+  "type": "geometry.congruence.svg_congruent_figures_explanation_mc",
+  "title": "Explain Congruence Using Rigid Motions",
+  "category": "Geometry",
+  "topic": "Congruence",
+  "subtopic": "Congruence from Rigid Motions",
+  "levels": ["integrated-math-1"],
+  "difficulty": 3,
+  "bloomsLevel": "Apply",
+  "questionFormat": "multiple-choice",
+  "assessmentRole": "core",
+  "testWeight": "medium",
+  "shuffleChoices": true,
+  "standards": ["G-CO.6"],
+  "tags": [
+    "congruence",
+    "rigid-motion",
+    "svg",
+    "triangles",
+    "explanation"
+  ],
+  "params": {},
+  "computed": {},
+  "template": {
+    "prompt": [
+      {
+        "kind": "text",
+        "content": "Triangle A can be moved onto Triangle B using only rigid motions. Which statement best explains why the triangles are congruent?"
+      },
+      {
+        "kind": "svg",
+        "content": "<svg viewBox='0 0 340 220' role='img' aria-label='Two congruent triangles where one is a translated and rotated image of the other'><line x1='20' y1='190' x2='320' y2='190' stroke='lightgray' stroke-width='1'/><line x1='20' y1='20' x2='20' y2='190' stroke='lightgray' stroke-width='1'/><polygon points='70,150 120,150 90,95' fill='none' stroke='black' stroke-width='3'/><text x='78' y='85' font-size='15'>Triangle A</text><polygon points='235,70 285,95 235,120' fill='none' stroke='black' stroke-width='3'/><text x='220' y='55' font-size='15'>Triangle B</text><path d='M 130 130 C 165 95, 185 85, 220 85' fill='none' stroke='gray' stroke-width='2' stroke-dasharray='5 5'/><text x='145' y='105' font-size='13' fill='gray'>rigid motions</text></svg>"
+      }
+    ],
+    "choices": [
+      {
+        "id": "correct",
+        "content": "Rigid motions preserve side lengths and angle measures, so one triangle can match the other exactly."
+      },
+      {
+        "id": "larger",
+        "content": "Rigid motions make the image larger, so the triangles are congruent."
+      },
+      {
+        "id": "same-position",
+        "content": "Congruent figures must always be in the same position on the plane."
+      },
+      {
+        "id": "different-size",
+        "content": "The triangles are congruent because they have the same shape but different sizes."
+      }
+    ],
+    "answer": {
+      "kind": "choice",
+      "choiceId": "correct"
+    },
+    "steps": [
+      {
+        "kind": "text",
+        "content": "Rigid motions include translations, rotations, and reflections. These transformations preserve distance and angle measure, so if one figure can be mapped onto another using rigid motions, the figures are congruent."
+      }
+    ]
+  }
+}

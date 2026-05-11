@@ -1,0 +1,94 @@
+{
+  "id": "geo-gco5-reflect-triangle-y-axis-mc",
+  "type": "geometry.transformations.reflect_triangle_y_axis_mc",
+  "title": "Reflect a Triangle Across the y-axis",
+  "category": "Geometry",
+  "topic": "Transformations",
+  "subtopic": "Reflections on the Coordinate Plane",
+  "levels": ["integrated-math-1"],
+  "difficulty": 2,
+  "bloomsLevel": "Apply",
+  "questionFormat": "multiple-choice",
+  "assessmentRole": "core",
+  "testWeight": "medium",
+  "shuffleChoices": true,
+  "standards": ["G-CO.5"],
+  "tags": [
+    "transformations",
+    "reflection",
+    "coordinate-plane",
+    "triangle",
+    "y-axis"
+  ],
+  "params": {
+    "ax": { "type": "int", "min": 1, "max": 5 },
+    "ay": { "type": "int", "min": -4, "max": 4 }
+  },
+  "computed": {
+    "bx": "ax + 2",
+    "by": "ay",
+    "cx": "ax + 1",
+    "cy": "ay + 3",
+
+    "apx": "0 - ax",
+    "apy": "ay",
+    "bpx": "0 - bx",
+    "bpy": "by",
+    "cpx": "0 - cx",
+    "cpy": "cy",
+
+    "wrongA1x": "ax",
+    "wrongA1y": "0 - ay",
+    "wrongB1x": "bx",
+    "wrongB1y": "0 - by",
+    "wrongC1x": "cx",
+    "wrongC1y": "0 - cy",
+
+    "wrongA2x": "0 - ax",
+    "wrongA2y": "0 - ay",
+    "wrongB2x": "0 - bx",
+    "wrongB2y": "0 - by",
+    "wrongC2x": "0 - cx",
+    "wrongC2y": "0 - cy"
+  },
+  "template": {
+    "prompt": [
+      {
+        "kind": "text",
+        "content": "Triangle ABC has vertices A({{ax}}, {{ay}}), B({{bx}}, {{by}}), and C({{cx}}, {{cy}}). The triangle is reflected across the y-axis. Which coordinates represent A′B′C′?"
+      }
+    ],
+    "choices": [
+      {
+        "id": "correct",
+        "content": "A′({{apx}}, {{apy}}), B′({{bpx}}, {{bpy}}), C′({{cpx}}, {{cpy}})"
+      },
+      {
+        "id": "x-axis",
+        "content": "A′({{wrongA1x}}, {{wrongA1y}}), B′({{wrongB1x}}, {{wrongB1y}}), C′({{wrongC1x}}, {{wrongC1y}})"
+      },
+      {
+        "id": "origin",
+        "content": "A′({{wrongA2x}}, {{wrongA2y}}), B′({{wrongB2x}}, {{wrongB2y}}), C′({{wrongC2x}}, {{wrongC2y}})"
+      },
+      {
+        "id": "unchanged",
+        "content": "A′({{ax}}, {{ay}}), B′({{bx}}, {{by}}), C′({{cx}}, {{cy}})"
+      }
+    ],
+    "answer": {
+      "kind": "choice",
+      "choiceId": "correct"
+    },
+    "steps": [
+      {
+        "kind": "text",
+        "content": "A reflection across the y-axis changes the sign of the x-coordinate and keeps the y-coordinate the same."
+      },
+      {
+        "kind": "math",
+        "content": "(x, y) \\rightarrow (-x, y)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "id": "geo-gco5-sequence-translation-reflection-mc",
+  "type": "geometry.transformations.sequence_translation_reflection_mc",
+  "title": "Sequence of Transformations",
+  "category": "Geometry",
+  "topic": "Transformations",
+  "subtopic": "Sequences of Transformations",
+  "levels": ["integrated-math-1"],
+  "difficulty": 3,
+  "bloomsLevel": "Apply",
+  "questionFormat": "multiple-choice",
+  "assessmentRole": "core",
+  "testWeight": "medium",
+  "shuffleChoices": true,
+  "standards": ["G-CO.5"],
+  "tags": [
+    "transformations",
+    "sequence",
+    "translation",
+    "reflection",
+    "rigid-motion",
+    "svg"
+  ],
+  "params": {},
+  "computed": {},
+  "template": {
+    "prompt": [
+      {
+        "kind": "text",
+        "content": "Triangle A is transformed to Triangle B. Which sequence of transformations maps Triangle A onto Triangle B?"
+      },
+      {
+        "kind": "svg",
+        "content": "<svg viewBox='0 0 320 220' role='img' aria-label='Triangle A translated right and reflected across the x-axis to form Triangle B'><line x1='20' y1='110' x2='300' y2='110' stroke='gray' stroke-width='2'/><text x='286' y='104' font-size='14'>x-axis</text><polygon points='50,70 90,70 65,35' fill='none' stroke='black' stroke-width='3'/><text x='58' y='28' font-size='15'>A</text><polygon points='190,150 230,150 205,185' fill='none' stroke='black' stroke-width='3'/><text x='198' y='205' font-size='15'>B</text><line x1='50' y1='70' x2='150' y2='70' stroke='lightgray' stroke-width='2' stroke-dasharray='5 5'/><polygon points='150,70 190,70 165,35' fill='none' stroke='lightgray' stroke-width='2' stroke-dasharray='5 5'/><text x='144' y='28' font-size='13' fill='gray'>after translation</text></svg>"
+      }
+    ],
+    "choices": [
+      {
+        "id": "correct",
+        "content": "Translate Triangle A to the right, then reflect it across the x-axis."
+      },
+      {
+        "id": "reflect-then-left",
+        "content": "Reflect Triangle A across the x-axis, then translate it to the left."
+      },
+      {
+        "id": "rotate",
+        "content": "Rotate Triangle A 90° clockwise about the origin."
+      },
+      {
+        "id": "vertical-translation-only",
+        "content": "Translate Triangle A straight down only."
+      }
+    ],
+    "answer": {
+      "kind": "choice",
+      "choiceId": "correct"
+    },
+    "steps": [
+      {
+        "kind": "text",
+        "content": "The dashed triangle shows Triangle A after it is translated to the right. Reflecting that translated triangle across the x-axis places it on Triangle B."
+      }
+    ]
+  }
+}
