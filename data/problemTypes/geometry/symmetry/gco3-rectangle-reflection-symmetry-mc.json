@@ -1,0 +1,64 @@
+{
+  "id": "geo-gco3-rectangle-reflection-symmetry-mc",
+  "type": "geometry.symmetry.rectangle_reflection_mc",
+  "title": "Rectangle Reflection Symmetry",
+  "category": "Geometry",
+  "topic": "Transformations",
+  "subtopic": "Reflection Symmetry",
+  "levels": ["integrated-math-1"],
+  "difficulty": 2,
+  "bloomsLevel": "Apply",
+  "questionFormat": "multiple-choice",
+  "assessmentRole": "core",
+  "testWeight": "medium",
+  "shuffleChoices": true,
+  "standards": ["G-CO.3"],
+  "tags": [
+    "transformations",
+    "symmetry",
+    "reflection",
+    "rectangle"
+  ],
+  "params": {},
+  "computed": {},
+  "template": {
+    "prompt": [
+      {
+        "kind": "text",
+        "content": "Which reflection carries the rectangle onto itself?"
+      },
+      {
+        "kind": "svg",
+        "content": "<svg viewBox='0 0 260 180' role='img' aria-label='A rectangle with dashed vertical and diagonal reference lines'><rect x='55' y='55' width='150' height='70' fill='none' stroke='black' stroke-width='3'/><line x1='130' y1='35' x2='130' y2='145' stroke='gray' stroke-width='2' stroke-dasharray='6 5'/><line x1='55' y1='125' x2='205' y2='55' stroke='lightgray' stroke-width='2' stroke-dasharray='4 5'/><text x='136' y='42' font-size='13'>line m</text></svg>"
+      }
+    ],
+    "choices": [
+      {
+        "id": "correct",
+        "content": "A reflection across the vertical line through the center of the rectangle"
+      },
+      {
+        "id": "diagonal",
+        "content": "A reflection across a diagonal of the rectangle"
+      },
+      {
+        "id": "outside-line",
+        "content": "A reflection across any vertical line outside the rectangle"
+      },
+      {
+        "id": "corner-line",
+        "content": "A reflection across a line through one corner only"
+      }
+    ],
+    "answer": {
+      "kind": "choice",
+      "choiceId": "correct"
+    },
+    "steps": [
+      {
+        "kind": "text",
+        "content": "A rectangle has reflection symmetry across the vertical and horizontal lines through its center. A non-square rectangle does not have reflection symmetry across its diagonals."
+      }
+    ]
+  }
+}

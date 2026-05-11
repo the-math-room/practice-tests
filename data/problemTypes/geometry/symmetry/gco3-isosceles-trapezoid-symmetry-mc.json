@@ -1,0 +1,64 @@
+{
+  "id": "geo-gco3-isosceles-trapezoid-symmetry-mc",
+  "type": "geometry.symmetry.isosceles_trapezoid_mc",
+  "title": "Isosceles Trapezoid Reflection Symmetry",
+  "category": "Geometry",
+  "topic": "Transformations",
+  "subtopic": "Reflection Symmetry",
+  "levels": ["integrated-math-1"],
+  "difficulty": 2,
+  "bloomsLevel": "Apply",
+  "questionFormat": "multiple-choice",
+  "assessmentRole": "core",
+  "testWeight": "medium",
+  "shuffleChoices": true,
+  "standards": ["G-CO.3"],
+  "tags": [
+    "transformations",
+    "symmetry",
+    "reflection",
+    "trapezoid"
+  ],
+  "params": {},
+  "computed": {},
+  "template": {
+    "prompt": [
+      {
+        "kind": "text",
+        "content": "The figure is an isosceles trapezoid. Which reflection carries it onto itself?"
+      },
+      {
+        "kind": "svg",
+        "content": "<svg viewBox='0 0 260 180' role='img' aria-label='An isosceles trapezoid with a dashed vertical line of symmetry'><polygon points='60,130 200,130 165,55 95,55' fill='none' stroke='black' stroke-width='3'/><line x1='130' y1='35' x2='130' y2='150' stroke='gray' stroke-width='2' stroke-dasharray='6 5'/><text x='138' y='45' font-size='13'>line m</text></svg>"
+      }
+    ],
+    "choices": [
+      {
+        "id": "correct",
+        "content": "A reflection across the vertical line through the midpoints of the bases"
+      },
+      {
+        "id": "base-reflection",
+        "content": "A reflection across the longer base"
+      },
+      {
+        "id": "diagonal-reflection",
+        "content": "A reflection across either diagonal"
+      },
+      {
+        "id": "side-reflection",
+        "content": "A reflection across one of the non-parallel sides"
+      }
+    ],
+    "answer": {
+      "kind": "choice",
+      "choiceId": "correct"
+    },
+    "steps": [
+      {
+        "kind": "text",
+        "content": "An isosceles trapezoid has one line of reflection symmetry: the line through the midpoints of its two bases."
+      }
+    ]
+  }
+}

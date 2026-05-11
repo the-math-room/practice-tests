@@ -1,0 +1,68 @@
+{
+  "id": "geo-gco3-regular-pentagon-rotation-mc",
+  "type": "geometry.symmetry.regular_pentagon_rotation_mc",
+  "title": "Regular Pentagon Rotation Symmetry",
+  "category": "Geometry",
+  "topic": "Transformations",
+  "subtopic": "Rotational Symmetry",
+  "levels": ["integrated-math-1"],
+  "difficulty": 3,
+  "bloomsLevel": "Apply",
+  "questionFormat": "multiple-choice",
+  "assessmentRole": "core",
+  "testWeight": "medium",
+  "shuffleChoices": true,
+  "standards": ["G-CO.3"],
+  "tags": [
+    "transformations",
+    "symmetry",
+    "rotation",
+    "regular-polygon"
+  ],
+  "params": {},
+  "computed": {},
+  "template": {
+    "prompt": [
+      {
+        "kind": "text",
+        "content": "A regular pentagon is rotated about its center. Which rotation carries the pentagon onto itself?"
+      },
+      {
+        "kind": "svg",
+        "content": "<svg viewBox='0 0 220 220' role='img' aria-label='A regular pentagon centered at a point'><polygon points='110,35 181,87 154,171 66,171 39,87' fill='none' stroke='black' stroke-width='3'/><circle cx='110' cy='110' r='3' fill='black'/><text x='118' y='115' font-size='14'>center</text></svg>"
+      }
+    ],
+    "choices": [
+      {
+        "id": "correct",
+        "content": "72°"
+      },
+      {
+        "id": "sixty",
+        "content": "60°"
+      },
+      {
+        "id": "ninety",
+        "content": "90°"
+      },
+      {
+        "id": "one-eighty",
+        "content": "180°"
+      }
+    ],
+    "answer": {
+      "kind": "choice",
+      "choiceId": "correct"
+    },
+    "steps": [
+      {
+        "kind": "text",
+        "content": "A regular pentagon has 5 equal rotational positions. Divide 360° by 5 to get 72°."
+      },
+      {
+        "kind": "math",
+        "content": "360 \\div 5 = 72"
+      }
+    ]
+  }
+}

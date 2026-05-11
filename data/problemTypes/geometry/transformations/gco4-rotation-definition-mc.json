@@ -1,0 +1,61 @@
+{
+  "id": "geo-gco4-rotation-definition-mc",
+  "type": "geometry.transformations.rotation_definition_mc",
+  "title": "Definition of a Rotation",
+  "category": "Geometry",
+  "topic": "Transformations",
+  "subtopic": "Rotations",
+  "levels": ["integrated-math-1"],
+  "difficulty": 2,
+  "bloomsLevel": "Understand",
+  "questionFormat": "multiple-choice",
+  "assessmentRole": "foundation",
+  "testWeight": "medium",
+  "shuffleChoices": true,
+  "standards": ["G-CO.4"],
+  "tags": [
+    "transformations",
+    "rotation",
+    "definition",
+    "angle",
+    "circle"
+  ],
+  "params": {},
+  "computed": {},
+  "template": {
+    "prompt": [
+      {
+        "kind": "text",
+        "content": "Which description best defines a rotation?"
+      }
+    ],
+    "choices": [
+      {
+        "id": "correct",
+        "content": "A transformation that turns every point around a fixed center by the same angle"
+      },
+      {
+        "id": "reflection",
+        "content": "A transformation that flips every point across a line"
+      },
+      {
+        "id": "translation",
+        "content": "A transformation that slides every point the same distance in the same direction"
+      },
+      {
+        "id": "dilation",
+        "content": "A transformation that changes the size of a figure from a fixed center"
+      }
+    ],
+    "answer": {
+      "kind": "choice",
+      "choiceId": "correct"
+    },
+    "steps": [
+      {
+        "kind": "text",
+        "content": "A rotation is defined by a center and an angle. Each point turns around the center by the same angle."
+      }
+    ]
+  }
+}

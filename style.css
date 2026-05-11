@@ -228,3 +228,24 @@ dialog::backdrop {
 .back-link:hover {
   text-decoration: underline;
 }
+
+.practice-set-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.practice-set-picker select {
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font: inherit;
+}
+
+.variant-group {
+  margin-top: 28px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+}

@@ -1,0 +1,65 @@
+{
+  "id": "geo-gco4-rotation-circle-angle-mc",
+  "type": "geometry.transformations.rotation_circle_angle_mc",
+  "title": "Rotation Using Center and Angle",
+  "category": "Geometry",
+  "topic": "Transformations",
+  "subtopic": "Rotations",
+  "levels": ["integrated-math-1"],
+  "difficulty": 3,
+  "bloomsLevel": "Apply",
+  "questionFormat": "multiple-choice",
+  "assessmentRole": "core",
+  "testWeight": "medium",
+  "shuffleChoices": true,
+  "standards": ["G-CO.4"],
+  "tags": [
+    "transformations",
+    "rotation",
+    "angle",
+    "circle",
+    "center"
+  ],
+  "params": {},
+  "computed": {},
+  "template": {
+    "prompt": [
+      {
+        "kind": "text",
+        "content": "Point A is rotated about center O to create point A′. Which statement must be true?"
+      },
+      {
+        "kind": "svg",
+        "content": "<svg viewBox='0 0 260 220' role='img' aria-label='Point A rotated around center O to point A prime'><circle cx='130' cy='110' r='75' fill='none' stroke='lightgray' stroke-width='2' stroke-dasharray='5 5'/><circle cx='130' cy='110' r='5' fill='black'/><text x='138' y='115' font-size='15'>O</text><circle cx='205' cy='110' r='5' fill='black'/><text x='212' y='115' font-size='15'>A</text><circle cx='130' cy='35' r='5' fill='black'/><text x='138' y='40' font-size='15'>A′</text><line x1='130' y1='110' x2='205' y2='110' stroke='gray' stroke-width='2'/><line x1='130' y1='110' x2='130' y2='35' stroke='gray' stroke-width='2'/><path d='M 160 110 A 30 30 0 0 0 130 80' fill='none' stroke='black' stroke-width='2'/><text x='150' y='91' font-size='14'>θ</text></svg>"
+      }
+    ],
+    "choices": [
+      {
+        "id": "correct",
+        "content": "OA and OA′ are the same length, and angle AOA′ is the angle of rotation."
+      },
+      {
+        "id": "different-distances",
+        "content": "OA′ must be longer than OA."
+      },
+      {
+        "id": "reflection",
+        "content": "Segment AA′ must be perpendicular to a line of reflection."
+      },
+      {
+        "id": "translation",
+        "content": "A and A′ must be connected by a horizontal segment."
+      }
+    ],
+    "answer": {
+      "kind": "choice",
+      "choiceId": "correct"
+    },
+    "steps": [
+      {
+        "kind": "text",
+        "content": "In a rotation, a point and its image stay the same distance from the center. The angle formed at the center is the angle of rotation."
+      }
+    ]
+  }
+}

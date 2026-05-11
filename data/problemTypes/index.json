@@ -11,5 +11,17 @@
   "geometry/transformations/gco2-point-image-under-transformation-mc.json",
   "geometry/transformations/gco2-rigid-vs-nonrigid-mc.json",
   "geometry/transformations/gco2-preserves-distance-angle-mc.json",
-  "geometry/transformations/gco2-function-input-output-mc.json"
+  "geometry/transformations/gco2-function-input-output-mc.json",
+
+  "geometry/symmetry/gco3-rectangle-rotation-symmetry-mc.json",
+  "geometry/symmetry/gco3-rectangle-reflection-symmetry-mc.json",
+  "geometry/symmetry/gco3-parallelogram-symmetry-mc.json",
+  "geometry/symmetry/gco3-isosceles-trapezoid-symmetry-mc.json",
+  "geometry/symmetry/gco3-regular-pentagon-rotation-mc.json",
+
+  "geometry/transformations/gco4-rotation-definition-mc.json",
+  "geometry/transformations/gco4-reflection-definition-mc.json",
+  "geometry/transformations/gco4-translation-definition-mc.json",
+  "geometry/transformations/gco4-reflection-perpendicular-distance-mc.json",
+  "geometry/transformations/gco4-rotation-circle-angle-mc.json"
 ]

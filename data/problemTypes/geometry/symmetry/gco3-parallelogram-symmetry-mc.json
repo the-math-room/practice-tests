@@ -1,0 +1,65 @@
+{
+  "id": "geo-gco3-parallelogram-symmetry-mc",
+  "type": "geometry.symmetry.parallelogram_mc",
+  "title": "Parallelogram Symmetry",
+  "category": "Geometry",
+  "topic": "Transformations",
+  "subtopic": "Symmetry of Quadrilaterals",
+  "levels": ["integrated-math-1"],
+  "difficulty": 2,
+  "bloomsLevel": "Understand",
+  "questionFormat": "multiple-choice",
+  "assessmentRole": "core",
+  "testWeight": "medium",
+  "shuffleChoices": true,
+  "standards": ["G-CO.3"],
+  "tags": [
+    "transformations",
+    "symmetry",
+    "rotation",
+    "reflection",
+    "parallelogram"
+  ],
+  "params": {},
+  "computed": {},
+  "template": {
+    "prompt": [
+      {
+        "kind": "text",
+        "content": "The figure is a parallelogram that is not a rectangle or rhombus. Which transformation carries it onto itself?"
+      },
+      {
+        "kind": "svg",
+        "content": "<svg viewBox='0 0 260 180' role='img' aria-label='A slanted parallelogram'><polygon points='70,125 190,125 220,55 100,55' fill='none' stroke='black' stroke-width='3'/><circle cx='145' cy='90' r='3' fill='black'/><text x='152' y='95' font-size='14'>center</text></svg>"
+      }
+    ],
+    "choices": [
+      {
+        "id": "vertical-reflection",
+        "content": "A reflection across a vertical line through its center"
+      },
+      {
+        "id": "horizontal-reflection",
+        "content": "A reflection across a horizontal line through its center"
+      },
+      {
+        "id": "correct",
+        "content": "A 180° rotation about its center"
+      },
+      {
+        "id": "ninety-rotation",
+        "content": "A 90° rotation about its center"
+      }
+    ],
+    "answer": {
+      "kind": "choice",
+      "choiceId": "correct"
+    },
+    "steps": [
+      {
+        "kind": "text",
+        "content": "A general parallelogram maps onto itself under a 180° rotation about its center. It usually does not have reflection symmetry."
+      }
+    ]
+  }
+}

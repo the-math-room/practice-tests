@@ -6,11 +6,13 @@ import {
   populatePracticeSetSelect,
   getProblemSlotsForPracticeSet
 } from "./practiceSetSelector.js";
-import { typesetMath } from "./utils.js";
+import { escapeHTML, typesetMath } from "./utils.js";
 
 let navigator;
 let problemTypes = [];
 let practiceSets = [];
+let currentPracticeSet = null;
+let currentVariantGroups = [];
 
 const els = {
   practiceSetSelect: document.getElementById("practice-set-select"),
@@ -26,11 +28,13 @@ const els = {
   showStepsBtn: document.getElementById("show-steps-btn"),
   newProblemBtn: document.getElementById("new-problem-btn"),
   showAllBtn: document.getElementById("show-all-btn"),
+  showVariantsBtn: document.getElementById("show-variants-btn"),
 
   gotoDialog: document.getElementById("goto-dialog"),
   gotoList: document.getElementById("goto-list"),
 
-  allProblemsContainer: document.getElementById("all-problems-container")
+  allProblemsContainer: document.getElementById("all-problems-container"),
+  allVariantsContainer: document.getElementById("all-variants-container")
 };
 
 async function init() {
@@ -65,6 +69,15 @@ async function init() {
 }
 
 function loadPracticeSet(practiceSetId) {
+  currentPracticeSet = practiceSets.find(practiceSet => {
+    return practiceSet.id === practiceSetId;
+  });
+
+  if (!currentPracticeSet) {
+    showFatalError(`Practice set not found: ${practiceSetId}`);
+    return;
+  }
+
   const problemSlots = getProblemSlotsForPracticeSet(
     practiceSetId,
     practiceSets,
@@ -78,8 +91,13 @@ function loadPracticeSet(practiceSetId) {
   navigator = new Navigator(problems, renderProblem, els.problemCard);
   navigator.render();
 
+  currentVariantGroups = [];
+
   els.allProblemsContainer.classList.add("hidden");
+  els.allVariantsContainer.classList.add("hidden");
+
   els.showAllBtn.textContent = "Show All Problems";
+  els.showVariantsBtn.textContent = "Show All Variants";
 
   renderGotoList();
   updateUI();
@@ -128,6 +146,7 @@ function bindEvents() {
   });
 
   els.showAllBtn.addEventListener("click", toggleAllProblems);
+  els.showVariantsBtn.addEventListener("click", toggleAllVariants);
 }
 
 function replaceCurrentProblem() {
@@ -152,6 +171,7 @@ function replaceCurrentProblemFromPool(currentProblem) {
   }
 
   const currentIndex = poolProblemTypeIds.indexOf(currentProblem.problemTypeId);
+
   const nextIndex = currentIndex === -1
     ? 0
     : (currentIndex + 1) % poolProblemTypeIds.length;
@@ -199,11 +219,15 @@ function findProblemTypeById(problemTypeId) {
 function renderGotoList() {
   els.gotoList.innerHTML = navigator.problems
     .map((problem, index) => {
+      const poolLabel = problem.practiceSetSlot?.poolTitle
+        ? `<small>${escapeHTML(problem.practiceSetSlot.poolTitle)}</small>`
+        : `<small>${escapeHTML(problem.type)}</small>`;
+
       return `
         <button type="button" class="goto-item" data-index="${index}">
           <span>${index + 1}</span>
-          <strong>${problem.title}</strong>
-          <small>${problem.type}</small>
+          <strong>${escapeHTML(problem.title)}</strong>
+          ${poolLabel}
         </button>
       `;
     })
@@ -224,7 +248,8 @@ async function toggleAllProblems() {
 
   if (isHidden) {
     els.allProblemsContainer.innerHTML = `
-      <h2>All Problems in This Practice Set</h2>
+      <h2>Generated Practice Final</h2>
+      <p class="muted">These are the questions currently selected for this practice set.</p>
       ${navigator.problems.map(renderProblemSummary).join("")}
     `;
 
@@ -238,9 +263,99 @@ async function toggleAllProblems() {
   }
 }
 
+async function toggleAllVariants() {
+  const isHidden = els.allVariantsContainer.classList.contains("hidden");
+
+  if (isHidden) {
+    if (currentVariantGroups.length === 0) {
+      currentVariantGroups = createAllVariantGroups(currentPracticeSet);
+    }
+
+    els.allVariantsContainer.innerHTML = `
+      <h2>All Question Variants</h2>
+      <p class="muted">
+        These are all available variants from the pools in this practice set.
+      </p>
+      ${currentVariantGroups.map(renderVariantGroup).join("")}
+    `;
+
+    els.allVariantsContainer.classList.remove("hidden");
+    els.showVariantsBtn.textContent = "Hide All Variants";
+
+    await typesetMath(els.allVariantsContainer);
+  } else {
+    els.allVariantsContainer.classList.add("hidden");
+    els.showVariantsBtn.textContent = "Show All Variants";
+  }
+}
+
+function renderVariantGroup(group) {
+  return `
+    <section class="variant-group">
+      <h3>${escapeHTML(group.title)}</h3>
+      <p class="muted">${escapeHTML(group.subtitle)}</p>
+      ${group.problems.map(renderProblemSummary).join("")}
+    </section>
+  `;
+}
+
+function createAllVariantGroups(practiceSet) {
+  if (!practiceSet || !Array.isArray(practiceSet.sections)) {
+    return [];
+  }
+
+  return practiceSet.sections.flatMap(section => {
+    if (!Array.isArray(section.items)) {
+      return [];
+    }
+
+    return section.items
+      .filter(item => item.type === "pool")
+      .map(pool => {
+        const problems = pool.items.map(poolItem => {
+          const problemType = findProblemTypeById(poolItem.problemTypeId);
+
+          if (!problemType) {
+            throw new Error(`Problem type not found: ${poolItem.problemTypeId}`);
+          }
+
+          const problem = createProblemFromType(problemType);
+
+          problem.practiceSetSlot = {
+            type: "pool",
+            sectionTitle: section.title,
+            poolTitle: pool.title,
+            poolProblemTypeIds: pool.items.map(item => item.problemTypeId)
+          };
+
+          return problem;
+        });
+
+        return {
+          title: pool.title,
+          subtitle: createVariantGroupSubtitle(section, pool),
+          problems
+        };
+      });
+  });
+}
+
+function createVariantGroupSubtitle(section, pool) {
+  const standards = Array.isArray(pool.standards)
+    ? pool.standards.join(", ")
+    : "";
+
+  if (standards) {
+    return `${section.title} · ${standards}`;
+  }
+
+  return section.title;
+}
+
 function updateUI() {
   if (!navigator || navigator.problems.length === 0) {
     els.problemCount.textContent = "No problems loaded";
+
     els.prevBtn.disabled = true;
     els.nextBtn.disabled = true;
     els.gotoBtn.disabled = true;
@@ -248,6 +363,8 @@ function updateUI() {
     els.showStepsBtn.disabled = true;
     els.newProblemBtn.disabled = true;
     els.showAllBtn.disabled = true;
+    els.showVariantsBtn.disabled = true;
+
     return;
   }
 
@@ -261,6 +378,7 @@ function updateUI() {
   els.showStepsBtn.disabled = false;
   els.newProblemBtn.disabled = false;
   els.showAllBtn.disabled = false;
+  els.showVariantsBtn.disabled = false;
 
   updateToggleButton(els.showAnswerBtn, navigator.showAnswer, "Answer");
   updateToggleButton(els.showStepsBtn, navigator.showSteps, "Steps");
@@ -275,7 +393,7 @@ function showFatalError(message) {
   els.problemCard.innerHTML = `
     <article>
       <h2>Something went wrong</h2>
-      <p>${message}</p>
+      <p>${escapeHTML(message)}</p>
       <p class="muted">Check that your data files exist and that your JSON is valid.</p>
     </article>
   `;
@@ -289,6 +407,7 @@ function showFatalError(message) {
   els.showStepsBtn.disabled = true;
   els.newProblemBtn.disabled = true;
   els.showAllBtn.disabled = true;
+  els.showVariantsBtn.disabled = true;
 }
 
 window.addEventListener("DOMContentLoaded", init);

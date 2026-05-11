@@ -1,0 +1,61 @@
+{
+  "id": "geo-gco4-reflection-definition-mc",
+  "type": "geometry.transformations.reflection_definition_mc",
+  "title": "Definition of a Reflection",
+  "category": "Geometry",
+  "topic": "Transformations",
+  "subtopic": "Reflections",
+  "levels": ["integrated-math-1"],
+  "difficulty": 2,
+  "bloomsLevel": "Understand",
+  "questionFormat": "multiple-choice",
+  "assessmentRole": "foundation",
+  "testWeight": "medium",
+  "shuffleChoices": true,
+  "standards": ["G-CO.4"],
+  "tags": [
+    "transformations",
+    "reflection",
+    "definition",
+    "line-of-reflection",
+    "perpendicular"
+  ],
+  "params": {},
+  "computed": {},
+  "template": {
+    "prompt": [
+      {
+        "kind": "text",
+        "content": "Which description best defines a reflection?"
+      }
+    ],
+    "choices": [
+      {
+        "id": "rotation",
+        "content": "A transformation that turns every point around a fixed center by the same angle"
+      },
+      {
+        "id": "correct",
+        "content": "A transformation that maps each point to the opposite side of a line, the same perpendicular distance from that line"
+      },
+      {
+        "id": "translation",
+        "content": "A transformation that slides every point the same distance in the same direction"
+      },
+      {
+        "id": "stretch",
+        "content": "A transformation that stretches a figure horizontally or vertically"
+      }
+    ],
+    "answer": {
+      "kind": "choice",
+      "choiceId": "correct"
+    },
+    "steps": [
+      {
+        "kind": "text",
+        "content": "In a reflection, the line of reflection is the perpendicular bisector of the segment joining each point to its image."
+      }
+    ]
+  }
+}

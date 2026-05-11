@@ -64,7 +64,66 @@
               "weight": 1
             }
           ]
+        },
+        {
+          "type": "pool",
+          "title": "Symmetry of Geometric Figures",
+          "standards": ["G-CO.3"],
+          "count": 1,
+          "selection": "weighted-random",
+          "items": [
+            {
+              "problemTypeId": "geo-gco3-rectangle-rotation-symmetry-mc",
+              "weight": 1
+            },
+            {
+              "problemTypeId": "geo-gco3-rectangle-reflection-symmetry-mc",
+              "weight": 2
+            },
+            {
+              "problemTypeId": "geo-gco3-parallelogram-symmetry-mc",
+              "weight": 2
+            },
+            {
+              "problemTypeId": "geo-gco3-isosceles-trapezoid-symmetry-mc",
+              "weight": 2
+            },
+            {
+              "problemTypeId": "geo-gco3-regular-pentagon-rotation-mc",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "type": "pool",
+          "title": "Definitions of Transformations",
+          "standards": ["G-CO.4"],
+          "count": 1,
+          "selection": "weighted-random",
+          "items": [
+            {
+              "problemTypeId": "geo-gco4-rotation-definition-mc",
+              "weight": 2
+            },
+            {
+              "problemTypeId": "geo-gco4-reflection-definition-mc",
+              "weight": 2
+            },
+            {
+              "problemTypeId": "geo-gco4-translation-definition-mc",
+              "weight": 2
+            },
+            {
+              "problemTypeId": "geo-gco4-reflection-perpendicular-distance-mc",
+              "weight": 3
+            },
+            {
+              "problemTypeId": "geo-gco4-rotation-circle-angle-mc",
+              "weight": 3
+            }
+          ]
         }
+
       ]
     },
     {

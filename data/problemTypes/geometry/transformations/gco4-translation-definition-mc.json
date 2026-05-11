@@ -1,0 +1,61 @@
+{
+  "id": "geo-gco4-translation-definition-mc",
+  "type": "geometry.transformations.translation_definition_mc",
+  "title": "Definition of a Translation",
+  "category": "Geometry",
+  "topic": "Transformations",
+  "subtopic": "Translations",
+  "levels": ["integrated-math-1"],
+  "difficulty": 1,
+  "bloomsLevel": "Understand",
+  "questionFormat": "multiple-choice",
+  "assessmentRole": "foundation",
+  "testWeight": "light",
+  "shuffleChoices": true,
+  "standards": ["G-CO.4"],
+  "tags": [
+    "transformations",
+    "translation",
+    "definition",
+    "parallel-lines",
+    "line-segment"
+  ],
+  "params": {},
+  "computed": {},
+  "template": {
+    "prompt": [
+      {
+        "kind": "text",
+        "content": "Which description best defines a translation?"
+      }
+    ],
+    "choices": [
+      {
+        "id": "correct",
+        "content": "A transformation that moves every point the same distance in the same direction"
+      },
+      {
+        "id": "rotation",
+        "content": "A transformation that turns every point around a fixed center"
+      },
+      {
+        "id": "reflection",
+        "content": "A transformation that flips every point across a line"
+      },
+      {
+        "id": "dilation",
+        "content": "A transformation that changes the size of a figure"
+      }
+    ],
+    "answer": {
+      "kind": "choice",
+      "choiceId": "correct"
+    },
+    "steps": [
+      {
+        "kind": "text",
+        "content": "A translation slides a figure. Each point moves the same distance in the same direction, so the connecting segments are parallel and congruent."
+      }
+    ]
+  }
+}

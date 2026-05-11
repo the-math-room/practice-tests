@@ -1,0 +1,64 @@
+{
+  "id": "geo-gco3-rectangle-rotation-symmetry-mc",
+  "type": "geometry.symmetry.rectangle_rotation_mc",
+  "title": "Rectangle Rotation Symmetry",
+  "category": "Geometry",
+  "topic": "Transformations",
+  "subtopic": "Rotational Symmetry",
+  "levels": ["integrated-math-1"],
+  "difficulty": 2,
+  "bloomsLevel": "Understand",
+  "questionFormat": "multiple-choice",
+  "assessmentRole": "core",
+  "testWeight": "medium",
+  "shuffleChoices": true,
+  "standards": ["G-CO.3"],
+  "tags": [
+    "transformations",
+    "symmetry",
+    "rotation",
+    "rectangle"
+  ],
+  "params": {},
+  "computed": {},
+  "template": {
+    "prompt": [
+      {
+        "kind": "text",
+        "content": "Which rotation carries the rectangle onto itself?"
+      },
+      {
+        "kind": "svg",
+        "content": "<svg viewBox='0 0 260 180' role='img' aria-label='A non-square rectangle centered on a point'><rect x='55' y='55' width='150' height='70' fill='none' stroke='black' stroke-width='3'/><circle cx='130' cy='90' r='3' fill='black'/><text x='137' y='95' font-size='14'>center</text></svg>"
+      }
+    ],
+    "choices": [
+      {
+        "id": "ninety",
+        "content": "A 90° rotation about its center"
+      },
+      {
+        "id": "correct",
+        "content": "A 180° rotation about its center"
+      },
+      {
+        "id": "forty-five",
+        "content": "A 45° rotation about its center"
+      },
+      {
+        "id": "any-angle",
+        "content": "A rotation by any angle about its center"
+      }
+    ],
+    "answer": {
+      "kind": "choice",
+      "choiceId": "correct"
+    },
+    "steps": [
+      {
+        "kind": "text",
+        "content": "A non-square rectangle maps onto itself after a 180° rotation about its center. A 90° rotation would swap the longer and shorter side directions, so it would not match the original rectangle."
+      }
+    ]
+  }
+}
